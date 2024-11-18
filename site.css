@@ -1,0 +1,82 @@
+/* CSS for bioSite project */
+
+/* Reset default margins and padding that are applied across different browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* includes padding and border in elements' width and height */
+}
+
+/* This ensures the width is set up to take up the whole viewport */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Spaces out the logo and navigation */
+    align-items: flex-end; /* pushes items to the bottom of the container */
+    padding: 20px;
+    background-color: #1A2A47;
+    color: #FFFFFF;
+    width: 100%; /* This ensures the entire width fills viewport */
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.logo-name p {
+    font-family: Montserrat, Arial, sans-serif;
+    padding: 10px;
+    font-weight: 400;
+    border: 1px solid #FFA3BF;
+}
+
+header nav ul {
+    display: flex; /* Makes the navigation items horizontal due to aligning on main axis */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+footer {
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #1A2A47;
+    color: #FFFFFF;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    font-family: Montserrat, Arial, sans-serif;
+    padding: 10px;
+    font-weight: 400;
+    border: 1px solid #FFA3BF;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
