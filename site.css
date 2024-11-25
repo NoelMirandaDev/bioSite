@@ -1,4 +1,8 @@
-/* CSS for bioSite project */
+/* 
+ * Name: Noel Miranda
+ * CSS for bioSite project 
+ * Status: WIP: Needs polishing.
+ */
 
 /* Reset default margins and padding that are applied across different browsers */
 * {
@@ -11,6 +15,11 @@
 html, body {
     width: 100%;
     height: 100%;
+    font-size: 16px; /* Style guide set defaults */
+    font-weight: 400; /* Style guide set defaults */
+    line-height: 1.6; /* Style guide set defaults */
+    letter-spacing: 0px; /* Style guide set defaults */
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 header {
@@ -26,10 +35,10 @@ header {
 }
 
 .logo-name p {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     padding: 10px;
     font-weight: 400;
-    border: 1px solid #FFA3BF;
+    border: 2px solid #FFA3BF;
 }
 
 header nav ul {
@@ -46,9 +55,162 @@ header nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color:#E573A6;
     font-size: 16px;
     font-family: Montserrat, Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-width: 320px;
+    padding: 10px 20px 10px 20px;
+    overflow: scroll;
+}
+
+.main-grid-container {
+    /*border: 3px solid red; */
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.inner-grid-container {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+    justify-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.inner-grid-container:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+/* May be not needed, needs review
+.card-image {
+    border: 1px solid purple;
+}
+*/
+.grid-figure {
+    padding-top: 15px;
+    box-shadow: 0 4px 8px 0 #0B0E1A;
+    border: 2px solid #0B0E1A;
+    border-radius: 10px;
+    width: 330px;  
+    overflow: hidden; /* Ensures content stays inside this box */
+    background-color: #1A2A47;
+    justify-items: center;
+    transition: 0.3s;
+}
+
+/* May be not needed, needs review
+.card-content {
+    border: 1px solid blue;
+}
+*/
+
+.card-content h3 {
+    color: #E573A6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    padding: 10px;
+}
+
+.smaller-image-window {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid #FFA3BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smaller-image-window img {
+    object-fit: cover;
+}
+
+#img3 {
+    object-position: 0px -70px;
+}
+
+#img4 {
+    object-position: 0px 10px;
+}
+
+#img5 {
+    object-position: 0px 20px;
+}
+
+#img6 {
+    object-position: 25px 0px;
+}
+
+.figcaption-small {
+    width: 300px;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.3;
+    color: #E573A6;
+    letter-spacing: 1px;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+.main-image-container {
+    border: 2px solid #0B0E1A;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 #0B0E1A;
+    width: 530px; 
+    height: 590px; 
+    overflow: hidden; /* Ensures content stays inside this box */
+    margin: 0 auto;
+    background-color: #1A2A47;
+}
+
+.main-image-window {
+    width: 500px; /* following image style for 500 x 500 */
+    height: 500px; /* following image style for 500 x 500 */
+    overflow: hidden; /* Ensures only part of the image inside this box is shown */
+    margin: 15px auto 0px;
+    border: 2px solid #FFA3BF;
+}
+
+.main-image-window img {
+    object-fit: cover; /* Crops the image to fill the container while keeping aspect ratio */
+}
+
+#img1 {
+    object-position: 0px -385px; /* Focuses on the part of the image 385px up */
+}
+
+#img2 {
+    object-position: -225px -20px;
+}
+
+.figcaption-main {
+    width: 500px;
+    color: #FFFFFF;
+    margin: 5px auto;
+}
+
+.content-container {
+    padding: 40px;
+}
+
+.content-container p {
+    margin-bottom: 20px;
 }
 
 footer {
@@ -61,13 +223,14 @@ footer {
     width: 100%;
     position: relative;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 footer p {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     padding: 10px;
     font-weight: 400;
-    border: 1px solid #FFA3BF;
+    border: 2px solid #FFA3BF;
 }
 
 footer nav ul {
@@ -79,4 +242,13 @@ footer nav ul {
 footer nav ul li {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#FFA3BF;
+}
+
+a:active {
+    font-weight: 700;
 }
