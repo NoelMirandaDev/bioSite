@@ -85,16 +85,18 @@ nav ul li a {
     justify-content: center;
     padding: 20px;
     transition: 0.3s;
+
 }
 
 .inner-grid-container:hover {
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
 }
-/* May be not needed, needs review
+
 .card-image {
     border: 1px solid purple;
+    justify-items: center; /* Test */
+
 }
-*/
 .grid-figure {
     padding-top: 15px;
     box-shadow: 0 4px 8px 0 #0B0E1A;
