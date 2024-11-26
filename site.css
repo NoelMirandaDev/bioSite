@@ -97,7 +97,7 @@ nav ul li a {
     align-content: center; /* Test */
 }
 .grid-figure {
-    padding-top: 15px;
+    /*padding-top: 15px; before */
     box-shadow: 0 4px 8px 0 #0B0E1A;
     border: 2px solid #0B0E1A;
     border-radius: 10px;
@@ -129,10 +129,14 @@ nav ul li a {
     width: 300px;
     height: 300px;
     overflow: hidden;
+    margin: 15px auto 0px; /* Test 4 addition*/
     border: 2px solid #FFA3BF;
+    
+    /* Test 4 Before layou
     display: flex;
     justify-content: center;
     align-items: center;
+    */
 }
 
 .smaller-image-window img {
@@ -140,7 +144,8 @@ nav ul li a {
 }
 
 #img3 {
-    object-position: 0px -70px;
+    /* object-position: 0px -70px; Test 4 */
+    object-position: -2px -200px; /* Test 4 Addition */
 }
 
 #img4 {
