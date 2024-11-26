@@ -85,7 +85,6 @@ nav ul li a {
     justify-content: center;
     padding: 20px;
     transition: 0.3s;
-
 }
 
 .inner-grid-container:hover {
@@ -93,11 +92,10 @@ nav ul li a {
 }
 
 .card-image {
-    border: 1px solid purple;
-    align-content: center; /* Test */
+    align-content: center;
 }
+
 .grid-figure {
-    /*padding-top: 15px; before */
     box-shadow: 0 4px 8px 0 #0B0E1A;
     border: 2px solid #0B0E1A;
     border-radius: 10px;
@@ -108,17 +106,14 @@ nav ul li a {
     transition: 0.3s;
 }
 
-/* May be not needed, needs review
 .card-content {
-    border: 1px solid blue;
+    overflow: scroll;
 }
-*/
 
 .card-content h3 {
     color: #E573A6;
     text-align: center;
     margin-bottom: 20px;
-    overflow: scroll; /* Test */
 }
 
 .card-content p {
@@ -129,14 +124,8 @@ nav ul li a {
     width: 300px;
     height: 300px;
     overflow: hidden;
-    margin: 15px auto 0px; /* Test 4 addition*/
+    margin: 15px auto 0px;
     border: 2px solid #FFA3BF;
-    
-    /* Test 4 Before layou
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    */
 }
 
 .smaller-image-window img {
@@ -144,20 +133,19 @@ nav ul li a {
 }
 
 #img3 {
-    /* object-position: 0px -70px; Test 4 */
-    object-position: -2px -200px; /* Test 4 Addition */
+    object-position: -2px -200px;
 }
 
 #img4 {
-    object-position: 0px 10px;
+    object-position: 0px -10px;
 }
 
 #img5 {
-    object-position: 0px 20px;
+    object-position: 0px -120px;
 }
 
 #img6 {
-    object-position: 25px 0px;
+    object-position: -90px -2px;
 }
 
 .figcaption-small {
