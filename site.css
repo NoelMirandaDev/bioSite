@@ -94,8 +94,6 @@ nav ul li a {
 
 .card-image {
     border: 1px solid purple;
-    justify-items: center; /* Test */
-
 }
 .grid-figure {
     padding-top: 15px;
@@ -106,6 +104,8 @@ nav ul li a {
     overflow: hidden; /* Ensures content stays inside this box */
     background-color: #1A2A47;
     justify-items: center;
+    padding-left: auto; /* Test */
+    padding-right: auto; /* Test */
     transition: 0.3s;
 }
 
