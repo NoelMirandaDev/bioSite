@@ -283,7 +283,7 @@ h1, h3 {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* Media query for smaller screens (less than 768px wide) */
+/* Media query for smaller screens (less than 430px wide) */
 @media (max-width: 430px) {
     .inner-grid-container {
         grid-template-columns: 1fr; /* stacks items vertically on small screens */
