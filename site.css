@@ -62,7 +62,7 @@ nav ul li a {
 
 .container {
     width: 100%;
-    min-width: 320px; /* Minimum width for responsiveness */
+    min-width: 340px; /* Minimum width for responsiveness */
     max-width: 1200px; /* Maximum width for large screens */
     margin: 0 auto; /* Centers the container */
     padding: 10px 20px 10px 20px;
@@ -282,7 +282,7 @@ h1, h3 {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* Media query for smaller screens (less than 430px wide) */
+/* Media query for smaller screens (less than 565px wide) */
 @media (max-width: 565px) {
     .inner-grid-container {
         grid-template-columns: 1fr; /* stacks items vertically on small screens */
@@ -294,8 +294,7 @@ h1, h3 {
     }
 
     footer p {
-        width: auto; /* Rescaling */
-        font-size: small; /* aesthetically nicer */
+        font-size: x-small; /* Aesthetically fits nicer */
     }
 
     .main-image-container {
@@ -322,5 +321,12 @@ h1, h3 {
         width: 300px; /* Rescaling image for smaller screens */
         height: 350px; /* Rescaling image for smaller screens */
         object-position: 0px -170px; /* New position for smaller image */
+    }
+}
+
+/* Media query for smaller screens (less than 400px wide) */
+@media (max-width: 400px) {
+    footer p {
+        font-size: xx-small; /* Aesthetically fits nicer */
     }
 }
