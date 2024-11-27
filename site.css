@@ -27,7 +27,6 @@ header {
     justify-content: space-between; /* Spaces out the logo and navigation */
     align-items: flex-end; /* Aligns items to the bottom of the header */
     padding: 20px;
-    padding: 20px;
     background-color: #1A2A47; /* Header background color */
     color: #FFFFFF; /* Text color for the header */
     width: 100%; /* This ensures the entire width fills viewport */
@@ -284,8 +283,44 @@ h1, h3 {
 }
 
 /* Media query for smaller screens (less than 430px wide) */
-@media (max-width: 430px) {
+@media (max-width: 565px) {
     .inner-grid-container {
         grid-template-columns: 1fr; /* stacks items vertically on small screens */
+    }
+
+    .logo-name p {
+        width: min-content; /* Rescale the logo for aesthetics*/
+        
+    }
+
+    footer p {
+        width: auto; /* Rescaling */
+        font-size: small; /* aesthetically nicer */
+    }
+
+    .main-image-container {
+        width: 330px; /* Rescaling */
+        height: fit-content; /* Rescale to fit content */
+    }
+
+    .main-image-window {
+        width: 300px; /* Rescaling */
+        height: 300px; /* Rescaling */
+    }
+
+    .figcaption-main {
+        width: 300px; /* Rescaling */
+    }
+
+    #img2 {
+        width: 300px; /* Rescaling image for smaller screens */
+        height: 350px; /* Rescaling image for smaller screens */
+        object-position: -150px -20px; /* New position for smaller image */
+    }
+
+    #img1 {
+        width: 300px; /* Rescaling image for smaller screens */
+        height: 350px; /* Rescaling image for smaller screens */
+        object-position: 0px -170px; /* New position for smaller image */
     }
 }
