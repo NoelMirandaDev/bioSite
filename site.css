@@ -1,7 +1,7 @@
 /* 
  * Name: Noel Miranda
  * CSS for bioSite project 
- * Status: WIP: Needs polishing.
+ * Status: Completed. Sent for Peer Review.
  */
 
 /* Reset default margins and padding that are applied across different browsers */
@@ -15,125 +15,151 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-size: 16px; /* Style guide set defaults */
-    font-weight: 400; /* Style guide set defaults */
-    line-height: 1.6; /* Style guide set defaults */
-    letter-spacing: 0px; /* Style guide set defaults */
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px; /* Base font size as per style guide */
+    font-weight: 400; /* Default font weight */
+    line-height: 1.6; /* Default line height */
+    letter-spacing: 0px; /* No extra spacing between letters */
+    font-family: 'Open Sans', Arial, sans-serif; /* Default font family */
 }
 
 header {
-    display: flex; /* Enables flexbox layout */
+    display: flex; /* Enables flexbox for layout */
     justify-content: space-between; /* Spaces out the logo and navigation */
-    align-items: flex-end; /* pushes items to the bottom of the container */
+    align-items: flex-end; /* Aligns items to the bottom of the header */
     padding: 20px;
-    background-color: #1A2A47;
-    color: #FFFFFF;
+    padding: 20px;
+    background-color: #1A2A47; /* Header background color */
+    color: #FFFFFF; /* Text color for the header */
     width: 100%; /* This ensures the entire width fills viewport */
     position: relative;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden; /* Prevents any child elements from overflowing */
 }
 
 .logo-name p {
     font-family: 'Open Sans', Arial, sans-serif;
     padding: 10px;
     font-weight: 400;
-    border: 2px solid #FFA3BF;
+    border: 2px solid #FFA3BF; /* Pink border around logo */
 }
 
 header nav ul {
-    display: flex; /* Makes the navigation items horizontal due to aligning on main axis */
-    list-style-type: none;
+    display: flex; /* Horizontal layout for navigation items */
+    list-style-type: none; /* Removes default list bullets */
     margin: 0;
     padding: 0;
 }
 
 header nav ul li {
-    margin-left: 20px;
-    margin-right: 10px;
+    margin-left: 20px; /* Left margin for spacing */
+    margin-right: 10px; /* Right margin for spacing */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color:#E573A6;
+    text-decoration: none; /* Removes underline from links */
+    color:#E573A6; /* Link color */
     font-size: 16px;
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .container {
     width: 100%;
-    min-width: 320px;
+    min-width: 320px; /* Minimum width for responsiveness */
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Centers the container */
     padding: 10px 20px 10px 20px;
-    overflow: scroll;
+    overflow: scroll; /* Enables scrolling for overflowing content */
 }
 
 .main-grid-container {
-    /*border: 3px solid red; */
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-    justify-content: center;
+    display: grid; /* Uses grid layout */
+    grid-template-columns: 1fr; /* Single column layout */
+    row-gap: 20px; /* Vertical space between rows */
+    justify-content: center; /* Centers the grid */
 }
 
 .inner-grid-container {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    column-gap: 10px;
-    row-gap: 20px;
-    justify-items: center;
-    justify-content: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Adds shadow to grid container */
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid: 400px min, flexible max */
+    column-gap: 10px; /* Horizontal space between columns */
+    row-gap: 20px; /* Vertical space between rows */
+    justify-items: center; /* Centers items within each grid cell */
+    justify-content: center; /* Centers the grid within the container */
     padding: 20px;
-    transition: 0.3s;
+    transition: 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Media query for smaller screens (less than 768px wide) */
+@media (max-width: 768px) {
+    .inner-grid-container {
+        grid-template-columns: 1fr; /* stacks items vertically on small screens */
+    }
 }
 
 .inner-grid-container:hover {
-    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.inner-grid-container a {
+    color: #E573A6;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and color */
+}
+
+.inner-grid-container a:hover {
+    background-color: #1A2A47; /* Background color on hover */
+    text-decoration: underline; /* Underline links on hover */
+    color: #FFA3BF; /* Change link color on hover */
+}
+
+.inner-grid-container a:active {
+    font-weight: 700; /* Bold text when the link is clicked */
 }
 
 .card-image {
-    align-content: center;
+    align-content: center; /* Centers image content */
 }
 
 .grid-figure {
-    box-shadow: 0 4px 8px 0 #0B0E1A;
+    box-shadow: 0 4px 8px 0 #0B0E1A; /* Subtle shadow */
     border: 2px solid #0B0E1A;
-    border-radius: 10px;
-    width: 330px;  
+    border-radius: 10px; /* Rounded corners */
+    width: 330px; /* Fixed width for grid item */
     overflow: hidden; /* Ensures content stays inside this box */
-    background-color: #1A2A47;
-    justify-items: center;
-    transition: 0.3s;
+    background-color: #1A2A47; /* Background color */
+    justify-items: center; /* Centers content */
+    transition: 0.3s; /* Smooth transition for hover effect */
 }
 
 .card-content {
-    overflow: scroll;
+    overflow: scroll; /* Enables scrolling inside card if content overflows */
 }
 
 .card-content h3 {
-    color: #E573A6;
-    text-align: center;
-    margin-bottom: 20px;
+    color: #E573A6; /* Title color */
+    text-align: center; /* Center-aligns the title */
+    margin-bottom: 10px;
+    font-size: 24px; /* Font size for the title */
 }
 
 .card-content p {
-    padding: 10px;
+    padding: 10px; /* Padding inside paragraphs */
 }
 
 .smaller-image-window {
     width: 300px;
     height: 300px;
-    overflow: hidden;
+    overflow: hidden; /* Hides overflow of image */
     margin: 15px auto 0px;
-    border: 2px solid #FFA3BF;
+    border: 2px solid #FFA3BF; /* Border around image window */
 }
 
 .smaller-image-window img {
-    object-fit: cover;
+    object-fit: cover; /* Ensures image covers the window without stretching */
 }
 
 #img3 {
-    object-position: -2px -200px;
+    object-position: -2px -200px; /* Focuses on specific part of the image */
 }
 
 #img4 {
@@ -150,28 +176,29 @@ nav ul li a {
 
 .figcaption-small {
     width: 300px;
-    color: #FFFFFF;
+    color: #FFFFFF; /* Text color for captions */
 }
 
 h1 {
-    font-size: 36px;
-    margin: 20px auto;
+    font-size: 36px; /* Font size for main headers */
+    font-weight: 700; /* Bold weight for emphasis */
+    margin: 20px auto; /* Center align header with margin */
     text-align: center;
-    line-height: 1.3;
-    color: #E573A6;
-    letter-spacing: 1px;
-    font-family: Montserrat, Arial, sans-serif;
+    line-height: 1.3; /* Line height for better readability */
+    color: #E573A6; /* Header color */
+    letter-spacing: 1px; /* Slight letter spacing */
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .main-image-container {
-    border: 2px solid #0B0E1A;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 #0B0E1A;
-    width: 530px; 
-    height: 590px; 
+    border: 2px solid #0B0E1A; /* Border around the main image container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px 0 #0B0E1A; /* Shadow around the container */
+    width: 530px; /* Fixed width for image container */
+    height: 590px; /* Fixed height for image container */
     overflow: hidden; /* Ensures content stays inside this box */
     margin: 0 auto;
-    background-color: #1A2A47;
+    background-color: #1A2A47; /* Background color */
 }
 
 .main-image-window {
@@ -179,7 +206,7 @@ h1 {
     height: 500px; /* following image style for 500 x 500 */
     overflow: hidden; /* Ensures only part of the image inside this box is shown */
     margin: 15px auto 0px;
-    border: 2px solid #FFA3BF;
+    border: 2px solid #FFA3BF; /* Border around the image window */
 }
 
 .main-image-window img {
@@ -196,28 +223,35 @@ h1 {
 
 .figcaption-main {
     width: 500px;
-    color: #FFFFFF;
+    color: #FFFFFF; /* White text for caption */
     margin: 5px auto;
 }
 
 .content-container {
+    margin-top: 20px;
     padding: 40px;
 }
 
 .content-container p {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.content-container h3 {
+    color: #E573A6; /* Subheader color */
+    font-size: 24px; /* Subheader font size */
+    margin-bottom: 5px;
 }
 
 footer {
     display:flex;
-    justify-content:space-between;
-    align-items: flex-start;
+    justify-content:space-between; /* Spaces out footer content */
+    align-items: flex-start; /* Aligns items at the top of the footer */
     padding: 20px;
     background-color: #1A2A47;
     color: #FFFFFF;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Prevents overflow */
     margin-top: 20px;
 }
 
@@ -229,7 +263,7 @@ footer p {
 }
 
 footer nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Removes default bullets */
     margin: 10px;
     padding: 0;
 }
@@ -246,4 +280,10 @@ a:hover {
 
 a:active {
     font-weight: 700;
+}
+
+h1, h3 {
+    line-height: 1.3;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
