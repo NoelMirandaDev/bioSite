@@ -1,7 +1,7 @@
 /* 
  * Name: Noel Miranda
  * CSS for bioSite project 
- * Status: Completed. Sent for Peer Review.
+ * Status: Completed.
  */
 
 /* Reset default margins and padding that are applied across different browsers */
@@ -28,15 +28,19 @@ header {
     align-items: flex-end; /* Aligns items to the bottom of the header */
     padding: 20px;
     background-color: #1A2A47; /* Header background color */
-    color: #FFFFFF; /* Text color for the header */
     width: 100%; /* This ensures the entire width fills viewport */
     position: relative;
     overflow: hidden; /* Prevents any child elements from overflowing */
 }
 
+.logo-name a:hover {
+    text-decoration: none;
+}
+
 .logo-name p {
     font-family: 'Open Sans', Arial, sans-serif;
     padding: 10px;
+    color: #FFFFFF; /* Text color for the header */
     font-weight: 400;
     border: 2px solid #FFA3BF; /* Pink border around logo */
 }
@@ -55,9 +59,17 @@ header nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Removes underline from links */
-    color:#E573A6; /* Link color */
+    color: #FFA3BF; /* Link color */
     font-size: 16px;
     font-family: 'Montserrat', Arial, sans-serif;
+}
+
+nav ul li a:hover {
+    text-shadow: 1px 1px 30px #FFFFFF;
+}
+
+header nav ul li a.active {
+    text-shadow: 1px 1px 20px #FFFFFF;
 }
 
 .container {
@@ -69,10 +81,14 @@ nav ul li a {
     overflow: scroll; /* Enables scrolling for overflowing content */
 }
 
+.hobbies-container {
+    padding-bottom: 40px; /* special case bottom margin for better shadow visibility */
+}
+
 .main-grid-container {
     display: grid; /* Uses grid layout */
     grid-template-columns: 1fr; /* Single column layout */
-    row-gap: 20px; /* Vertical space between rows */
+    row-gap: 30px; /* Vertical space between rows */
     justify-content: center; /* Centers the grid */
 }
 
