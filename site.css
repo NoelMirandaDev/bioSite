@@ -68,8 +68,11 @@ nav ul li a:hover {
     text-shadow: 1px 1px 30px #FFFFFF;
 }
 
+/* While on a certain page, the nav bar emphasizes to the user what exact page they are on */
 header nav ul li a.active {
     text-shadow: 1px 1px 20px #FFFFFF;
+    font-weight: 700; 
+    font-size: 18px;
 }
 
 .container {
